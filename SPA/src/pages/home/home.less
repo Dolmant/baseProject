@@ -1,0 +1,533 @@
+@import './../../css/constants.less';
+
+@-webkit-keyframes sdb {
+    0% {
+      opacity: 0; }
+    30% {
+      opacity: 1; }
+    60% {
+      box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.1);
+      opacity: 0; }
+    100% {
+      opacity: 0; }
+}
+  
+@keyframes sdb {
+    0% {
+      opacity: 0; }
+    30% {
+      opacity: 1; }
+    60% {
+      box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.1);
+      opacity: 0; }
+    100% {
+      opacity: 0; }
+}
+
+@-webkit-keyframes bouncer {
+    0% {
+        margin-bottom: 0; }
+    50% {
+        margin-bottom: 1em; }
+    100% {
+        margin-bottom: 0; }
+}
+  
+@keyframes bouncer {
+    0% {
+      margin-bottom: 0; }
+    50% {
+      margin-bottom: 1em; }
+    100% {
+      margin-bottom: 0; }
+}
+
+// @-webkit-keyframes pageflipEnter {
+//     0% {
+//         clip-path: polygon(100% 100%, 100% 100%, 100% 100%); }
+//     100% {
+//         clip-path: polygon(100% -100%, -100% 100%, 100% 100%); }
+// }
+// @keyframes pageflipEnter {
+//     0% {
+//         clip-path: polygon(100% 100%, 100% 100%, 100% 100%); }
+//     100% {
+//         clip-path: polygon(100% -100%, -100% 100%, 100% 100%); }
+// }
+// @-webkit-keyframes pageflipLeave {
+//     0% {
+//         clip-path: polygon(100% -100%, -100% 100%, 100% 100%); }
+//     100% {
+//         clip-path: polygon(100% 100%, 100% 100%, 100% 100%); }
+// }
+// @keyframes pageflipLeave {
+//     0% {
+//         clip-path: polygon(100% -100%, -100% 100%, 100% 100%); }
+//     100% {
+//         clip-path: polygon(100% 100%, 100% 100%, 100% 100%); }
+// }
+@-webkit-keyframes pageflipEnter {
+    0% {
+        clip-path: inset(0% 100% 0% 0%); }
+    100% {
+        clip-path: inset(0% 0% 0% 0%); }
+}
+@keyframes pageflipEnter {
+    0% {
+        clip-path: inset(0% 100% 0% 0%); }
+    100% {
+        clip-path: inset(0% 0% 0% 0%); }
+}
+@-webkit-keyframes pageflipLeave {
+    0% {
+        clip-path: inset(0% 0% 0% 0%); }
+    100% {
+        clip-path: inset(0% 100% 0% 0%); }
+}
+@keyframes pageflipLeave {
+    0% {
+        clip-path: inset(0% 0% 0% 0%); }
+    100% {
+        clip-path: inset(0% 100% 0% 0%); }
+}
+
+@-webkit-keyframes grow {
+    0% {
+        height: 0px; }
+    100% {
+        height: 100px; }
+}
+@keyframes grow {
+    0% {
+        height: 0px; }
+    100% {
+        height: 100px; }
+}
+
+@-webkit-keyframes growOngoing {
+    0% {
+        height: 0px; }
+    50% {
+        height: 100px; }
+    100% {
+        height: 0px; }
+}
+@keyframes growOngoing {
+    0% {
+        height: 0px; }
+    50% {
+        height: 100px; }
+    100% {
+        height: 0px; }
+}
+
+@-webkit-keyframes growBorder {
+    0% {
+        border-bottom-width: 0px; }
+    100% {
+        border-bottom-width: 80px; }
+}
+@keyframes growBorder {
+    0% {
+        border-bottom-width: 0px; }
+    100% {
+        border-bottom-width: 80px; }
+}
+
+.homeNew {
+    font-size: 1rem;
+    box-shadow: inset 0 51px 140px 3px rgba(0,0,0,.2);
+    max-width: 100vw;
+
+    .hideIt {
+        visibility: hidden;
+    }
+    .page1 {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        .fancyBig {
+            font-size: 1.4em;
+            font-weight: 500;
+        }
+        .homeMenu {
+            align-self: flex-start;
+        }
+        
+        #black {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #000;
+            z-index: 1;
+        }
+        #text {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%) translateX(60px);
+            color: white;
+            font-size: 60px;
+            line-height: 60px;
+            font-weight: 200;
+            text-align: right;
+            z-index: 2;
+
+            .bold {
+                vertical-align: sub;
+            }
+        }
+        .logo {
+            position: absolute;
+            z-index: 0;
+            top: 40%;
+            left: 50%;
+            background-image: url("/assets/borrowed_assets/thincats-450x153cheetah.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            height: 120px;
+            width: 120px;
+            transform: translateX(-100%) translateX(-140px) translateY(-50%);
+        }
+        .buttonsContainer {
+            align-self: flex-start;
+        }
+        .slogan {
+            font-size: 40px;
+            color: #000;
+        }
+        .findOutMore {
+            height: 10vh;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            // button {
+            //     // bottom: 0;
+            // }
+            .bounce-container {
+                margin-left: 10px;
+                display: inline-block;
+                -webkit-animation: bouncer 3s infinite;
+                animation: bouncer 3s infinite;
+                border-radius: 100%;
+                color: black;
+        
+                i {
+                    font-size: 2em;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        // todo fix all webkit only transforms to work for everything
+        .seller {
+            color: black;
+            text-align: center;
+            margin-top: 1em;
+
+            .sellerText {
+                margin-top: 10em;
+            }
+
+            .buttonContainer {
+                -webkit-perspective: 700px;
+                -moz-perspective: 700px;
+                -ms-perspective: 700px;
+                perspective: 700px;
+
+                button:hover {
+                    top: -10px;
+                    box-shadow: 0px 10px 10px rgba(165, 130, 15, 0.2);
+                    
+                    -webkit-transform: rotateX(20deg);
+                    -moz-transform: rotateX(20deg);
+                    -ms-transform: rotateX(20deg);
+                    transform: rotateX(20deg);
+                }
+
+                button:active {
+                    top: 0px;
+                    box-shadow: 0px 0px 0px rgba( 15, 165, 60, 0.0 );
+                    background: #ffcc00;
+                }
+    
+                button {
+                    font-size: 2em;
+                    color: black;
+                    padding: 1em;
+                    margin-top: 2em;
+                    font-weight: 500;
+                    border-width: 2px;
+                    border-color: #ffcc00;
+    
+                    display: inline-block;
+                    position: relative;
+                    top: 0;
+    
+                    -webkit-transform: translateZ(0);
+                    -moz-transform: translateZ(0);
+                    -ms-transform: translateZ(0);
+                    transform: translateZ(0);
+                    
+                    -webkit-transition: all 0.2s ease;
+                    -moz-transition: all 0.2s ease;
+                    -ms-transition: all 0.2s ease;
+                    transition: all 0.2s ease;
+                }
+            }
+        }
+    }
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        opacity: 0.5;
+    }
+
+    .page2 {
+        height: 100vh;
+        width: 100vw;
+        color: white;
+        background-image: url("/assets/crowd-grey-dimmer.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .flow {
+            width: 20vw;
+        }
+        .page2-SubContainer {
+            height: 100%;
+            filter: none;
+        }
+        .centered {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+
+            .light {
+                width: 3em;
+            }
+            .arrow {
+                width: 1em;
+            }
+            .peopleCash {
+                width: 4em;
+                margin-top: 1em;
+            }
+            .dualArrow {
+                height: 1.8em;
+                display: flex;
+            }
+            .peopleAlert {
+                width: 4em;
+                margin-top: 1em;
+            }
+            .reverseArrow {
+                transform: rotate(180deg);
+                width: 1em;
+            }
+            i {
+                color: white;
+                font-size: 3em;
+            }
+            .blueText {
+                color: #5783a9;
+                font-size: 2em;
+        }
+        }
+        .page2TextContainer {
+            max-height: 50%;
+            border-top: solid white 1px;
+            .page2Text {
+                padding: 1em;
+                font-size: 1em;
+            }
+        }
+
+        .page2IconContainer {
+            max-height: 50%;
+        }
+        .fancyBorder {
+            border-left: solid white 1px;
+        }
+    }
+    .page3 {
+        width: 200vw;
+        background-color: white;
+        color: black;
+        transition: transform 1s ease-in-out;
+
+        &.translateLeft {
+            transform: translateX(-50vw);
+        }
+
+        .light {
+            width: 4em;
+        }
+        .plant {
+            width: 3em;
+        }
+        .wallet {
+            width: 4em;
+        }
+        .lock {
+            width: 3.7em;
+        }
+        .medal {
+            width: 3.5em;
+        }
+        .magGlass {
+            width: 3.5em;
+        }
+        .time {
+            width: 5em;
+        }
+        .topIcon {
+            margin: auto;
+        }
+        .patternBackground {
+            -webkit-transition: flex-basis 1s ease-in-out;
+            -moz-transition: flex-basis 1s ease-in-out;
+            -o-transition: flex-basis 1s ease-in-out;
+            transition: flex-basis 1s ease-in-out;
+            background-image: url("/assets/CrissCrossPattern.jpg");
+            background-position: center;
+            background-repeat: repeat;
+            background-size: 300px 300px;
+            color: white;
+        }
+        .whiteBackground {
+            -webkit-transition: flex-basis 1s ease-in-out;
+            -moz-transition: flex-basis 1s ease-in-out;
+            -o-transition: flex-basis 1s ease-in-out;
+            transition: flex-basis 1s ease-in-out;
+        }
+        .page3Title {
+            font-size: 1.4em;
+            // todo unecessary once we strip out the old css
+            b {
+                vertical-align: top;
+            }
+        }
+        .page3Block {
+            padding: 1em;
+
+            .page3Heading {
+                font-weight: 500;
+                padding-bottom: 1em;
+            }
+            .page3Content {
+                padding-bottom: 1em;
+                font-weight: 200;
+            }
+        }
+        .endText {
+            font-weight: 500;
+            text-align: center;
+
+            button {
+                display: block;
+                margin-top: 1em;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+.pageFlipper-enter {
+    display: none;
+}
+
+.pageFlipper-enter-done {
+    -webkit-animation: pageflipEnter 1s;
+    animation: pageflipEnter 1s;
+}
+.pageFlipper-exit {
+    -webkit-animation: pageflipLeave 0.5s forwards;
+    animation: pageflipLeave 0.5s forwards;
+}
+
+.expandPointArrow {
+    position: absolute;
+    width: 0px;
+    -webkit-animation: growBorder forwards;
+    animation: growBorder forwards;
+    z-index: -1;
+    will-change: border-bottom-width;
+    animation-delay: 2s;
+
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 80px solid black;
+
+    &.leftArrow {
+        transform: skewX(45deg)
+    }
+    &.rightArrow {
+        transform: skewX(-45deg)
+    }
+}
+
+.fillWhite {
+    fill:white;
+}
+.fillBlack {
+    fill:black;
+    g {
+        fill:black !important;
+    }
+}
+
+.expandThickArrow {
+    position: absolute;
+    animation-delay: 2s;
+    width: 0px;
+    bottom: 0;
+    will-change: height;
+    -webkit-animation: growOngoing;
+    animation: growOngoing;
+    // -webkit-animation: grow forwards;
+    // animation: grow forwards;
+    border-left: 5px solid black;
+    z-index: -1;
+
+    &.leftArrow {
+        transform: skewX(45deg)
+    }
+    &.rightArrow {
+        transform: skewX(-45deg)
+    }
+}
+
+.thincatsCorner {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 50px 50px;
+        border-color: black white;
+    }
+}
+
+.padding1em {
+    padding: 1em;
+}

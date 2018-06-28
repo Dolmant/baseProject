@@ -1,0 +1,85 @@
+syntax = "proto3";
+
+package pb;
+
+// The service definition.
+service authsvc {
+  // Login with some public data.
+  rpc Login (LoginRequest) returns (LoginReply) {}
+
+  // NewUser a secret message
+  rpc NewUser (NewUserRequest) returns (NewUserReply) {}
+
+  // Decrypt a secret message
+  rpc Decrypt (DecryptRequest) returns (DecryptReply) {}
+
+  // Validate a secret message
+  rpc Validate (ValidateRequest) returns (ValidateReply) {}
+
+// Subscribe with some public data.
+  rpc Subscribe (SubscribeRequest) returns (SubscribeReply) {}
+
+  // UnSubscribe a secret message
+  rpc UnSubscribe (UnSubscribeRequest) returns (UnSubscribeReply) {}
+
+}
+
+message LoginRequest {
+  string username = 1;
+  string password = 2;
+}
+
+message LoginReply {
+  string err = 1;
+  string Auth = 2;
+}
+
+message NewUserRequest {
+  string username = 1;
+  string password = 2;
+  string name = 3;
+}
+
+message NewUserReply {
+  string err = 1;
+  string Auth = 2;
+}
+
+message DecryptRequest {
+  string crypto = 1;
+}
+
+message DecryptReply {
+  string secret = 1;
+  string err = 2;
+}
+
+message ValidateRequest {
+  string crypto = 1;
+}
+
+message ValidateReply {
+  bool valid = 1;
+  string err = 2;
+}
+
+message JWTPayloadType {
+    int64 UserID = 1;
+};
+
+message SubscribeRequest {
+  string token = 1;
+  JWTPayloadType JWTPayload = 2;
+}
+
+message SubscribeReply {
+  string err = 1;
+}
+
+message UnSubscribeRequest {
+  JWTPayloadType JWTPayload = 1;
+}
+
+message UnSubscribeReply {
+  string err = 1;
+}

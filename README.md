@@ -1,0 +1,1 @@
+Standard project layout for golang and react.

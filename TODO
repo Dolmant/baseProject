@@ -1,0 +1,28 @@
+kubernetes postgres needs static storage
+error needs to be in all return messages or return a http error somehow
+need auth/capatcha for the newlogin service
+use graph QL for data eventually
+
+remove hardcoded user id etc
+fix all todos
+switch to gin release mode in prod
+
+documentation
+data service:
+Need to provide: all raw data for graphing
+
+graph X against Y using text
+Conditions: {
+    timeFrom:
+    timeTo:
+    sessionID:
+}
+X: {
+    groupBy: "uniqueUser, sessionLength"
+    value: "timeSpent" || value: "units"
+    elementSearch: "click class:paynow"
+}
+Y: {
+    value: "unit" || value: "clicks"
+    elementSearch: "click class:paynow"
+}

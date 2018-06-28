@@ -1,0 +1,15 @@
+[libs]
+[ignore]
+.*node_modules/fbjs.*
+
+[options]
+module.name_mapper='.*\(.css\)' -> 'empty/object'
+module.name_mapper='.*\(.less\)' -> 'empty/object'
+module.name_mapper='pages' ->'<PROJECT_ROOT>/src/pages'
+module.name_mapper='components' ->'<PROJECT_ROOT>/src/components'
+module.name_mapper='util' ->'<PROJECT_ROOT>/src/util'
+module.name_mapper='assets' ->'<PROJECT_ROOT>/assets'
+module.name_mapper='store' ->'<PROJECT_ROOT>/src/store/store'
+module.name_mapper='types' ->'<PROJECT_ROOT>/src/types/types'
+module.system=haste
+esproposal.decorators=ignore

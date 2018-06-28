@@ -1,0 +1,43 @@
+{
+    "plugins": ["react", "jasmine", "flowtype"],
+    "extends": ["airbnb", "plugin:jasmine/recommended"],
+    "parser": "babel-eslint",
+    "globals": {
+        "document": true,
+        "expect": true,
+        "describe": true,
+        "it": true,
+        "window": true
+    },
+    "rules": {
+        "flowtype/define-flow-type": 1,
+        "flowtype/use-flow-type": 1,
+        "class-methods-use-this": ["off"],
+        "import/first": ["off"],
+        "import/no-unresolved": ["off"],
+        "import/extensions": ["off"],
+        "import/no-extraneous-dependencies": ["off"],
+        "no-undef": ["off"],
+		"react/jsx-indent-props": ["error", 4],
+        "linebreak-style": [0, 0],
+        "max-len": ["off"],
+        "indent": ["error", 4],
+        "react/prefer-stateless-function": ["off"],
+        "quote-props": ["off"],
+        "semi": ["error", "never"],
+        "no-mixed-spaces-and-tabs": ["error"],
+        "no-tabs": 2,
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/jsx-indent": ["error", 4],
+        "react/prop-types": ["off"],
+        "quotes": ["error", "double"],
+        "jsx-a11y/href-no-hash": ["off"],
+        "no-underscore-dangle": ["off"],
+        "object-curly-spacing": ["error", "never"],
+		"jsx-a11y/no-static-element-interactions": "off",
+        "react/self-closing-comp": ["error", {
+            "component": false,
+            "html": false
+        }]
+    }
+}

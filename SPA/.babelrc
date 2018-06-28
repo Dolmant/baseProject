@@ -1,0 +1,4 @@
+{
+  "presets": ["env", "es2015", "react", "flow", "stage-0"],
+  "plugins": ["transform-object-rest-spread", "transform-decorators-legacy"]
+}
